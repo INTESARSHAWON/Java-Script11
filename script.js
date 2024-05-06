@@ -1,7 +1,7 @@
+//object
 
+// eta ekta object, emne declare kore
 
-
-// eta ekta object
 // const student= {
 
 
@@ -40,14 +40,23 @@ const employee={
         console.log("tax rate is 10%");
     }
 };
-const karanArjun={
-    salary: 50000;
+const karanArjun1={
+    salary: 50000,
 };
 
+const karanArjun2={
+    salary: 50000,
+};
+const karanArjun3={
+    salary: 50000,
+};
+const karanArjun4={
+    salary: 50000,
+};
 
+karanArjun1.__proto__ = employee;
+karanArjun2.__proto__ = employee;
+karanArjun3.__proto__ = employee;
+karanArjun4.__proto__ = employee;
 
-//front end a lage na dekhe apatoto class stop ekhane 
-// https://www.youtube.com/watch?v=VlPiVmYuoqw
-// 8.28->9.21 a giye sikhe nibo lagle
-// biday 
-
+// prototype ekta special property jeta Java Script object er moddhe thakbei, eta diye object access kora jay
