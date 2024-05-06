@@ -83,32 +83,106 @@
 //class in JS
 
 
-class ToyotaCar{
-    start(){
-        console.log("start");
-    }
-    stop(){
-        console.log("stop");
-    }
-    //ekhane notun ekta function rakhtesi jetate ()er moddhe argument thakbe, nicher object gula eta use korte parbe 
+// class ToyotaCar{
+//     start(){
+//         console.log("start");
+//     }
+//     stop(){
+//         console.log("stop");
+//     }
+//     //ekhane notun ekta function rakhtesi jetate ()er moddhe argument thakbe, nicher object gula eta use korte parbe 
 
-    setBrand(brand){
-        this.brandName = brand;
-        // this hocche ekhane object jetar jonno function create kora hocche
-        //ekhane this. er sathe je brandname ache eta object er property, but = er pashe jei bran ache ota ar bracket ermoddher ta argument
+//     setBrand(brand){
+//         this.brandName = brand;
+//         // this hocche ekhane object jetar jonno function create kora hocche
+//         //ekhane this. er sathe je brandname ache eta object er property, but = er pashe jei bran ache ota ar bracket ermoddher ta argument
+//     }
+// }
+// //eta ekta class, ekhane koma diye separate korte hoy na, niche dekhbo class theke kemne object create kore
+// let fortuner = new ToyotaCar();
+// // log a giye fortuner ke start stop sob e koraite parbo, karon class er moddhe jesob function ache, object access korte parbe
+// fortuner.setBrand = "fortuner";
+
+// let lexus = new ToyotaCar();
+// // lexus o ei class tar sob use korte parbe, lexus.start() ba lexus.stop()- eshob likhe
+// lexus.setBrand = "lexus";
+// // upore this hocche ekhane object jetar jonno function create kora hocche, this er jayga ta fortune lexus eshob object nicche
+
+// //uporer fortuner, lexus jokhon print dibo log a, auto constructor naam a special ekta method create hobe
+// //ei constructor amra create na korleo JS auto create kore
+// // tobe eta amra custom way te create korte pari jekono class er moddhe
+// //niche oitai kortesi
+
+
+
+// //constructor
+// // eta JS er ekta special method
+// // construcor er onno naam nai, eta diyei create kora lage
+// // uporer example ta diye amra eta niche create kore dekhachhi
+// // constructor er moddhe diye multiple valur pass kora jay, niche amra oita korbo
+
+
+
+// class ToyotaCar{
+//     constructor(brand, mileage){
+//         console.log("creating new object");
+//         this.brand = brand;
+//         this.mileage = mileage;
+//     }
+//     start(){
+//         console.log("start");
+//     }
+//     stop(){
+//         console.log("stop");
+//     }
+
+// }
+// let fortuner = new ToyotaCar("fortuner", 10);
+// console.log(fortuner);
+// let lexus = new ToyotaCar("lexus", 12);
+// console.log(lexus);
+// //log a giye fortuner lexus likhlei hobe
+
+
+
+
+
+class Person{
+    constructor(){
+        this.species = "homo sapiens";
+    }
+    eat() {
+        console.log("eat");
+    }
+    sleep(){
+        console.log("sleep");
+    }
+    work(){
+        console.log("do nothing");
     }
 }
-//eta ekta class, ekhane koma diye separate korte hoy na, niche dekhbo class theke kemne object create kore
-let fortuner = new ToyotaCar();
-// log a giye fortuner ke start stop sob e koraite parbo, karon class er moddhe jesob function ache, object access korte parbe
-fortuner.setBrand = "fortuner";
 
-let lexus = new ToyotaCar();
-// lexus o ei class tar sob use korte parbe, lexus.start() ba lexus.stop()- eshob likhe
-lexus.setBrand = "lexus";
-// upore this hocche ekhane object jetar jonno function create kora hocche, this er jayga ta fortune lexus eshob object nicche
+class Engineer extends Person{
+    work(){
+        console.log("do coding");
+    }
+}
 
-//uporer fortuner, lexus jokhon print dibo log a, auto constructor naam a special ekta method create hobe
-//ei constructor amra create na korleo JS auto create kore
-// tobe eta amra custom way te create korte pari jekono class er moddhe
-//niche oitai kortesi
+class Doctor extends Person{
+    work(){
+        console.log("patient serving");
+    }
+}
+
+let karan = new Engineer();
+let arjun = new Doctor();
+//extends kora mane parents er sob boishisto nijer moddhe niye nea
+//log a giye karan ba arjun likhle bojha jabe era person er sob niye nise
+//upore constructor ache, extends er khetre etao niye ney
+
+
+//front end a lage na dekhe apatoto class stop ekhane 
+// https://www.youtube.com/watch?v=VlPiVmYuoqw
+// 8.28->9.21 a giye sikhe nibo lagle
+// biday 
+
